@@ -12,13 +12,13 @@ function CounterFunctional() {
   };
 
   return (
-    <div>
+    <>
       <h1>Functional Counter</h1>
       <button onClick={decrement}>-</button>
       <span>{count}</span>
       <button onClick={increment}>+</button>
-    </div>
+    </>
   );
 }
 
-export { CounterFunctional };
+export default CounterFunctional;

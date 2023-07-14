@@ -1,6 +1,6 @@
-import React from "react";
+import { Component } from "react";
 
-class CounterClass extends React.Component {
+class CounterClass extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -22,14 +22,14 @@ class CounterClass extends React.Component {
 
   render() {
     return (
-      <div>
+      <>
         <h1>Class Counter</h1>
         <button onClick={this.decrement}>-</button>
         <span>{this.state.count}</span>
         <button onClick={this.increment}>+</button>
-      </div>
+      </>
     );
   }
 }
 
-export { CounterClass };
+export default CounterClass;
