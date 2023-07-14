@@ -13,9 +13,9 @@ function CounterFunctional() {
 
   return (
     <>
-      <h1>Functional Counter</h1>
+      <h1>Functional Counter Component</h1>
       <button onClick={decrement}>-</button>
-      <span>{count}</span>
+      <span className="count">{count}</span>
       <button onClick={increment}>+</button>
     </>
   );
