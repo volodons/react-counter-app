@@ -1,12 +1,17 @@
 import { Component } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { increment, decrement } from "../actions/counterActions.js";
 
-const CounterReactRedux = ({ count, onIncrement, onDecrement }) => {
+const CounterReactRedux = () => {
+  const count = useSelector((state) => state.count);
+  const dispatch = useDispatch();
+
   return (
     <>
       <h1>React-Redux Counter Component</h1>
-      <button onClick={onDecrement}>-</button>
+      <button onClick={() => dispatch(decrement)}>-</button>
       <span className="count">{count}</span>
-      <button onClick={onIncrement}>+</button>
+      <button onClick={() => dispatch(increment)}>+</button>
     </>
   );
 };

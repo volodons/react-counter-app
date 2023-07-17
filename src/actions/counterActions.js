@@ -1,16 +1,12 @@
 const INCREMENT = "INCREMENT";
 const DECREMENT = "DECREMENT";
 
-const increment = () => {
-  return {
-    type: INCREMENT,
-  };
+const increment = {
+  type: INCREMENT,
 };
 
-const decrement = () => {
-  return {
-    type: DECREMENT,
-  };
+const decrement = {
+  type: DECREMENT,
 };
 
 export { INCREMENT, DECREMENT, increment, decrement };
