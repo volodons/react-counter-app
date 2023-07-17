@@ -1,17 +1,17 @@
-import { Component } from "react";
+import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { increment, decrement } from "../actions/counterActions.js";
+import { increment, decrement } from "../reducers/counterSlice.js";
 
 const CounterReactRedux = () => {
-  const count = useSelector((state) => state.count);
+  const count = useSelector((state) => state.counter);
   const dispatch = useDispatch();
 
   return (
     <>
       <h1>React-Redux Counter Component</h1>
-      <button onClick={() => dispatch(decrement)}>-</button>
+      <button onClick={() => dispatch(decrement())}>-</button>
       <span className="count">{count}</span>
-      <button onClick={() => dispatch(increment)}>+</button>
+      <button onClick={() => dispatch(increment())}>+</button>
     </>
   );
 };
